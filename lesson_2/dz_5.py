@@ -14,9 +14,7 @@ print('(A)')
 for i in list_price:
     str_i = str(i)
     if str_i.count('.') == 1:  # если есть точка
-        rub = str_i[:str_i.find(".")]  # срез  от начала до точки #
-        kop = int(str_i[str_i.find('.') + 1:len(str_i)])  # срез от первой точки и до конца строки
-        print(f'{rub} руб {kop:02} коп')
+        print(f'{str_i[:str_i.find(".")]} руб {int(str_i[str_i.find(".") + 1:len(str_i)]):02} коп')
     else:
         print(f'{i} руб 00 коп')
 
