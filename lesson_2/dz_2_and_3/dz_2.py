@@ -17,10 +17,10 @@ for idx, name in enumerate(list_temp):
     if name.isdigit():
         digit = list_temp.pop(idx).zfill(2)  # забираем строку и добавляем 0 если одно значение
         list_temp.insert(idx, f'"{digit}"')  # добавляем свормировенное  значение обрамленное кавычками
-    elif name[1:].isdigit() and (name[0] == '+' or name[0]):  # если после плюса или минуса цифры то обрабатываем
+    elif name[1:].isdigit() and (name[0] == '+' or name[0] == '-'):  # если после плюса или минуса цифры то обрабатываем
         digit = list_temp.pop(idx)  # забираем строку
         if len(digit) == 2:  # если два значения то добавляем нули и кавычки
-            list_temp.insert(idx, f'"{name[0]}{name[1].zfill(2)}" ')
+            list_temp.insert(idx, f'"{name[0]}{int(name[1]):02}" ')
         elif len(digit) > 2:  # если значений больше  то добавляем только кавычки
             list_temp.insert(idx, f'"{digit}"')
 
