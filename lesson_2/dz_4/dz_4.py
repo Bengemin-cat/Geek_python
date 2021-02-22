@@ -7,4 +7,4 @@
 
 company = ['инженер-конструктор Игорь', 'главный бухгалтер МАРИНА', 'токарь высшего разряда нИКОЛАй',
            'директор аэлита']
-print(*(f'Привет, {name[name.rfind(" ") + 1:].capitalize()}!' for name in company))
+print(*(f'Привет, {name[name.rfind(" ") + 1:].capitalize()}!' for name in company), sep='\n')
