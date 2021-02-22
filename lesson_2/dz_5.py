@@ -14,7 +14,10 @@ print('(A)')
 for i in list_price:
     str_i = str(i)
     if str_i.count('.') == 1:  # если есть точка
-        print(f'{str_i[:str_i.find(".")]} руб {int(str_i[str_i.find(".") + 1:len(str_i)]):02} коп')
+        rub, kop = str_i.split(".")
+        if len(kop) == 1:
+            kop += "0"
+        print(f'{rub} руб {int(kop):02} коп')
     else:
         print(f'{i} руб 00 коп')
 
