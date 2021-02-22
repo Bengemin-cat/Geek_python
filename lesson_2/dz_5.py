@@ -30,3 +30,7 @@ print(f'{id(list_price)} -  id после сортировки')
 print('C')
 list_price_wane = sorted(list_price, reverse=True)
 print(list_price_wane)
+
+print('D')
+list_price_max5 = sorted(list_price)
+print(list_price_max5[-5:])
