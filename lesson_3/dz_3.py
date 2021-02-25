@@ -19,4 +19,9 @@ def thesaurus(*args):
     return dict_name
 
 
-print(thesaurus("Иван", "Мария", "Петр", "Илья"))
+print(thesaurus("Иван", "Мария", "Петр", "Анна", "Илья"))
+
+# Как поступить, если потребуется сортировка по ключам? Можно ли использовать словарь в этом случае?
+sort_dict_keys = sorted(thesaurus("Иван", "Мария", "Петр", "Анна", "Илья"))
+
+print(sort_dict_keys)
