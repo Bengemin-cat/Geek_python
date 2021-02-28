@@ -25,7 +25,7 @@ def thesaurus_adv(*args):
         if name[0] in dict_name[find_space]:
             dict_name[find_space][name[0]].append(name)
         else:
-            dict_name[find_space][name[0]] = [name]
+            dict_name[find_space].setdefault(name[0], [name])
     return dict_name
 
 
