@@ -22,4 +22,4 @@ def get_jokes(namber):
     return list_d
 
 
-print(get_jokes(8))
+print(get_jokes(int(input('Введите колличество шуток: '))))
