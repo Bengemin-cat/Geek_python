@@ -21,7 +21,8 @@ def get_jokes(namber=min(len(nouns), len(adverbs), len(adjectives)), flag='allow
     :param flag: Если Block  то сгенерирует не больше минимального колличества значений в списках
     :return: Возвращает список  шуток
     """
-
+    if flag == 'block' and namber > min(len(nouns), len(adverbs), len(adjectives)):
+        return f'Число уникальных шуток превышено максимум: {min(len(nouns), len(adverbs), len(adjectives))}'
     list_d = []
     new_nouns, new_adverbs, new_adjectives = nouns, adverbs, adjectives.copy()
     while namber > 0:
