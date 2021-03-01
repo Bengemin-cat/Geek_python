@@ -16,8 +16,8 @@ translate = {
 }
 
 
-def num_translate_adv(namber):
-    return translate.get(namber.lower()).capitalize() if namber.istitle() else translate.get(namber.lower())
+def num_translate_adv(number):
+    return translate.get(number.lower()).capitalize() if number.istitle() else translate.get(number.lower())
 
 
 print(num_translate_adv(input('Введите число на английском: ')))

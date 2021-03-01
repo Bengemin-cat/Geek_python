@@ -18,8 +18,8 @@ translate = {
 }
 
 
-def num_translate(namber):
-    return translate.get(namber.lower())
+def num_translate(number):
+    return translate.get(number.lower())
 
 
-print(num_translate(input('Введите число на ангийском: ')))
+print(num_translate(input('Введите число на английском: ')))
