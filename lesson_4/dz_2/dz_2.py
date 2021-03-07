@@ -10,8 +10,11 @@ def currency_rates(currency):
         if currency.upper() == element.find('CharCode').text:
             name = element.find('Name').text
             coin = Decimal(element.find('Value').text.replace(',', '.'))
-            return print(f'Курс {name} = {coin} рубля')
+            return f'Курс {name} = {coin} рубля'
 
 
-currency_rates('EuR')
-currency_rates('USd')
+print(currency_rates('Eu'))
+print(currency_rates('USd'))
+print(currency_rates('Aud'))
+
+

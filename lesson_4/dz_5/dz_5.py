@@ -2,6 +2,6 @@ import sys
 
 from utils import currency_rates
 
-filename, valutes = sys.argv
+filename, cod = sys.argv
+print(currency_rates(cod))
 
-currency_rates(valutes)
