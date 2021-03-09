@@ -5,4 +5,5 @@ def odd_nums(n):
 
 odd_to_15 = odd_nums(15)
 
-print(next(odd_to_15, 'done'))
+for i in range(10):
+    print(next(odd_to_15, 'done'))
