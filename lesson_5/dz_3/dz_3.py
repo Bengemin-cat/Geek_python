@@ -8,6 +8,5 @@ klasses = [
 
 g = ((tutors[i], klasses[i]) if len(klasses) > i else (tutors[i], None) for i in range(len(tutors)))
 
-for i in range(len(tutors)+1):
-    print(next(g,'Истощился'))
-
+for i in range(len(tutors) + 1):
+    print(next(g, 'Истощился'))
