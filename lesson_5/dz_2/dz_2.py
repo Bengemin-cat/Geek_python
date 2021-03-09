@@ -3,5 +3,7 @@ def odd_nums(n):
 
 
 odd_nums_15 = odd_nums(15)
-print(next(odd_nums_15))
-print(next(odd_nums_15))
+
+for i in range(10):
+
+    print(next(odd_nums_15, 'done'))
