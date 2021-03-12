@@ -16,6 +16,5 @@ def currency_rates(currency):
             return f'Курс {name} = {coin} рубля \n{date(int(today[-1]), int(today[-2]), int(today[0]))}'
 
 
-
 if __name__ == '__main__':
     print(currency_rates(input('Введите код валюты, Например USD, EUR: ')))
