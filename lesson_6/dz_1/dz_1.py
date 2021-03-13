@@ -1,5 +1,8 @@
-with open('nginx_logs.txt') as log:
-    gen = (line.split() for line in log)
-    list_gen = [(i[0], i[5].replace('"', ''), i[6]) for i in gen]
+def open_list():
+    with open('nginx_logs.txt') as log:
+        gen = (line.split() for line in log)
+        return [(i[0], i[5].replace('"', ''), i[6]) for i in gen]
 
-print(list_gen)
+
+if __name__ == '__main__':
+    print(open_list())
