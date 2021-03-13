@@ -1,5 +1,5 @@
 def open_list():
-    with open('nginx_logs.txt') as log:
+    with open('nginx_logs.txt', 'r', encoding='utf-8') as log:
         gen = (line.split() for line in log)
         return [(i[0], i[5].replace('"', ''), i[6]) for i in gen]
 
