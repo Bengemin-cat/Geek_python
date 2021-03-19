@@ -1,8 +1,10 @@
 import os
 import shutil
 
-my_project = r'C:\Users\vlad\Desktop\Python\Vladimir_Vyalkov\Geek_Python\Lesson_7\dz_2\my_project'
+project_name = 'my_project'
 
-for root,dir,file in os.walk(my_project):
-    print(dir)
+for root, dirs, files in os.walk(project_name):
+    if 'templates' in dirs and root != project_name:
+        for entry in os.listdir(os.path.join(root, 'templates')):
+            shutil.copytree(os.path.join(root, 'templates', entry), os.path.join(os.getcwd(), 'templates', entry))
 
