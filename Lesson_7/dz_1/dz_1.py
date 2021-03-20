@@ -11,7 +11,7 @@ def create_fold(main_fold='my_project', *args):
     for _ in args:
         for fold in _:
             if not os.path.exists(fold):
-                os.mkdir(os.path.join(root, fold))
+                os.mkdir(os.path.join(main_fold, fold))
 
 
 if __name__ == '__main__':
