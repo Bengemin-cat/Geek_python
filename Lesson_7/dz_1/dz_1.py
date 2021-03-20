@@ -15,4 +15,4 @@ def create_fold(main_fold='my_project', *args):
 
 
 if __name__ == '__main__':
-    create_fold(root)
+    create_fold(root, folds)
