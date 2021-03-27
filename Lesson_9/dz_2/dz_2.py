@@ -1,18 +1,14 @@
-WEIGHT = 25
-
-
 class Road:
-    def __init__(self, width, length):
-        self._width = width
-        self._length = length
+    weight = 25
 
-    def calculate_coverage(self, depth=5):
-        print(
-            f'{self._width} м*{self._length} м*{WEIGHT} кг*{depth} см = '
-            f'{self._width * self._length * WEIGHT * depth // 1000} т.')
-        return
+    def __init__(self, l, w):
+        self._length = l
+        self._width = w
+
+    def street_asphalt(self, thickness):
+        return print(f'{self._length * self._width * self.weight * thickness // 1000} тонн')
 
 
 street = Road(20, 5000)
 
-street.calculate_coverage(5)
+street.street_asphalt(5)
