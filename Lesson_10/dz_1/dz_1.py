@@ -13,13 +13,6 @@ class Matrix:
         return st
 
     def __add__(self, other):
-        # s = []
-        # for i, j in zip_longest(self.matrix, other.matrix,fillvalue=[]):
-        #     f = []
-        #     for cel_1, cel_2 in zip_longest(i, j, fillvalue=0):
-        #         f.append(cel_1 + cel_2)
-        #     s.append(f)
-        # return Matrix(s)
         return Matrix([[cel_1 + cel_2 for cel_1, cel_2 in zip_longest(i, j, fillvalue=0)]
                        for i, j in zip_longest(self.matrix, other.matrix, fillvalue=[])])
 
