@@ -9,7 +9,7 @@ class Matrix:
     def __str__(self):
         st = ''
         for i in self.matrix:
-            st += f"{''.join(str(i)).strip('[]').replace(',', '')}\n"
+            st += f"|{''.join(str(i)).strip('[]').replace(',', '')}|\n"
         return st
 
     def __add__(self, other):
