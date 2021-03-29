@@ -1,5 +1,7 @@
 from itertools import zip_longest
-
+a = [[31, 22], [37, 43], [51, 86, 5]]
+b = [[3, 5], [2, 4], [-1, 64]]
+c = [[3, 5, 8, 3], [8, 3, 7, 1]]
 
 class Matrix:
 
@@ -17,9 +19,9 @@ class Matrix:
                        for i, j in zip_longest(self.matrix, other.matrix, fillvalue=[])])
 
 
-matrix = Matrix([[31, 22], [37, 43], [51, 86, 5]])
-matrix_2 = Matrix([[3, 5], [2, 4], [-1, 64]])
-matrix_3 = Matrix([[3, 5, 8, 3], [8, 3, 7, 1]])
+matrix = Matrix(a)
+matrix_2 = Matrix(b)
+matrix_3 = Matrix(c)
 matrix_sum_2_3 = matrix_2 + matrix_3
 print(matrix_sum_2_3)
 print(matrix + matrix_sum_2_3)
