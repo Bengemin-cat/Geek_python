@@ -2,7 +2,7 @@ import re
 
 
 class Data:
-    __re_valid_date = re.compile(r'^\d{1,2}-\d{1,2}-\d{4}')
+    __re_valid_date = re.compile(r'^\d{2}-\d{2}-\d{4}')
 
     def __init__(self, data):
         self.data = data
