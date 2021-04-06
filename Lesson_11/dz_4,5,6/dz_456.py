@@ -1,9 +1,21 @@
 class Stock:
     def __init__(self):
         self.stock = {
-            'Printer': {'HP': 1},
-            'Scanner': {},
-            'Xerox': {}
+            'Printer': {
+                        'HP': {
+
+                            'price': 15000,
+                            'count': 10,
+                            'color': 'Цветной'
+
+                                }
+                        },
+            'Scanner': {
+
+                        },
+            'Xerox': {
+
+                    }
         }
 
     def give_equipment(self, type_, product):
@@ -57,7 +69,7 @@ while True:
         print('Склад закрыт')
         break
     elif mode == 1:
-        print('Какой товар хотите добавить\n1: Printer\n2: Scanner\n3: Xerox')
+        print('\rКакой товар хотите добавить\n1: Printer\n2: Scanner\n3: Xerox')
         mode = int(input('Введите значение: '))
         if mode == 1:
             printer_model = input(
@@ -67,5 +79,5 @@ while True:
                 "3: Canon\n"
             )
             printer_price = input('Введите цену:\n>> ')
-            printer_article = input('Введите артикул:\n>> ')
+            printer_count = input('Введите артикул:\n>> ')
             printer_color = input('Введите скорость подачи:\n>> ')
