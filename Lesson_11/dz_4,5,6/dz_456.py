@@ -1,7 +1,7 @@
 class Stock:
     def __init__(self):
         self.stock = {
-            'Printer': {},
+            'Printer': {'HP': 1},
             'Scanner': {},
             'Xerox': {}
         }
@@ -14,10 +14,10 @@ class Stock:
 
 
 class Equipment:
-    def __init__(self, model, price, description):
+    def __init__(self, model, price, article):
         self.model = model
         self.price = price
-        self.description = description
+        self.article = article
 
     def show_model(self):
         return self.model
@@ -26,39 +26,46 @@ class Equipment:
         return self.price
 
     def show_type_(self):
-        return self.description
+        return self.article
 
 
 class Printer(Equipment):
 
-    def __init__(self, model, price, description, color):
-        super().__init__(model, price, description)
+    def __init__(self, model, price, article, color):
+        super().__init__(model, price, article)
         self.color = color
 
 
 class Scanner(Equipment):
-    def __init__(self, model, price, description, resolution):
-        super().__init__(model, price, description)
+    def __init__(self, model, price, article, resolution):
+        super().__init__(model, price, article)
         self.resolution = resolution
 
 
 class Xerox(Equipment):
-    def __init__(self, model, price, description, speed_copy):
-        super().__init__(model, price, description)
+    def __init__(self, model, price, article, speed_copy):
+        super().__init__(model, price, article)
         self.speed_copy = speed_copy
 
 
 storage = Stock()
-p = Printer('HP', 1500, 'Printer', 'color')
-s = Scanner('Canon', 18400, 'Scanner', '1600x900')
-x = Xerox('Samsung', 42900, 'Xerox', '20')
-
-storage.give_equipment(p.description, p)
-print(storage.stock)
-print('=' * 80, )
-storage.give_equipment(s.description, s)
-print(storage.stock)
-print('=' * 80)
-storage.give_equipment(x.description, x)
-print(storage.stock)
-print('=' * 80)
+while True:
+    print(
+        'Выберите соответствующую цифру для выполнения операции  \n1: Добавить товар\n2: Переместить товар \n3: Выйти')
+    mode = int(input('Введите значение: '))
+    if mode == 3:
+        print('Склад закрыт')
+        break
+    elif mode == 1:
+        print('Какой товар хотите добавить\n1: Printer\n2: Scanner\n3: Xerox')
+        mode = int(input('Введите значение: '))
+        if mode == 1:
+            printer_model = input(
+                "Выберите модель:\n"
+                "1: HP\n"
+                "2: Samsung\n"
+                "3: Canon\n"
+            )
+            printer_price = input('Введите цену:\n>> ')
+            printer_article = input('Введите артикул:\n>> ')
+            printer_color = input('Введите скорость подачи:\n>> ')
